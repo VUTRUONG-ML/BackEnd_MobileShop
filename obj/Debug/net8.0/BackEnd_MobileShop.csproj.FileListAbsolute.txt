@@ -48,6 +48,7 @@ E:\BAIKT\BackEnd_MobileShop\obj\Debug\net8.0\BackEnd_MobileShop.AssemblyInfo.cs
 E:\BAIKT\BackEnd_MobileShop\obj\Debug\net8.0\BackEnd_MobileShop.csproj.CoreCompileInputs.cache
 E:\BAIKT\BackEnd_MobileShop\obj\Debug\net8.0\BackEnd_MobileShop.MvcApplicationPartsAssemblyInfo.cs
 E:\BAIKT\BackEnd_MobileShop\obj\Debug\net8.0\BackEnd_MobileShop.MvcApplicationPartsAssemblyInfo.cache
+E:\BAIKT\BackEnd_MobileShop\obj\Debug\net8.0\BackEnd_MobileShop.sourcelink.json
 E:\BAIKT\BackEnd_MobileShop\obj\Debug\net8.0\scopedcss\bundle\BackEnd_MobileShop.styles.css
 E:\BAIKT\BackEnd_MobileShop\obj\Debug\net8.0\staticwebassets.build.json
 E:\BAIKT\BackEnd_MobileShop\obj\Debug\net8.0\staticwebassets.development.json

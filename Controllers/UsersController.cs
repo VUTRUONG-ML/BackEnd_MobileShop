@@ -174,6 +174,44 @@ namespace BackEnd_MobileShop.Controllers
                 return StatusCode(500, $"Lỗi khi xóa user: {ex.Message}");
             }
         }
+
+        // POST: api/users/
+        [HttpPost]
+        public IActionResult Add([FromBody] RegisterRequest req)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Vui lòng nhập đầy đủ thông tin.");
+            }
+            try
+            {
+                // Kiểm tra user đã tồn tại chưa
+                if (_context.Users.Any(u => u.UserName == req.UserName))
+                {
+                    return BadRequest("UserName đã tồn tại.");
+                }
+                var hasher = new PasswordHasher<User>();
+                var user = new User
+                {
+                    UserName = req.UserName,
+                    FullName = req.FullName,
+                    Address = req.Address,
+                    Phone = req.Phone,
+                    Role = "Employee"
+                };
+                user.Password = hasher.HashPassword(user, req.Password);
+
+                _context.Users.Add(user);
+                _context.SaveChanges();
+
+                return Ok("Thêm Employee thành công!");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Thêm Employee thất bại: {ex.Message}");
+            }
+
+        }
     }
 
 }

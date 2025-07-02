@@ -13,6 +13,7 @@ namespace BackEnd_MobileShop.Models
         public DbSet<Model> Models { get; set; } = null!;
         public DbSet<Mobile> Mobiles { get; set; } = null!;
         public DbSet<Transaction> Transactions { get; set; } = null!;
-        // Sau này có thể thêm DbSet<Mobile>, DbSet<Company>, v.v.
+        public DbSet<Sale> Sales { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
 }
